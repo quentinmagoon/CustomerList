@@ -19,9 +19,11 @@ public class CustomerList {
      */
     public static void main(String[] args) {
         
+	    //asks user to enter in required informaation
          String customer = JOptionPane.showInputDialog("Enter name, address, and postal code of"
             +  " customer: ");
-         
+	    
+    		//reads text file and detects errors
 		File textFile = new File("customers");
 		FileReader in;
 		BufferedReader readFile;
@@ -43,7 +45,7 @@ public class CustomerList {
                     System.err.println("IOException: " + e.getMessage());
                 }
 	       
-        
+        //writes text and detects errors
         File dataFile = new File("customers");
         FileWriter out;
         BufferedWriter writeFile;
